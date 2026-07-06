@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RIM-HSE | Health, Safety & Environment Training & Consulting Mauritania</title>
+  <meta name="description" content="RIM-HSE is the premier Health, Safety, and Environment (HSE) training and consulting firm in Mauritania, providing certified training, risk assessments, and ISO compliance.">
+  
+  <!-- Tailwind CSS & Google Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            teal: {
+              brand: '#0AA89B',
+              hover: '#09968a',
+              light: '#E6F6F5',
+            },
+            charcoal: {
+              950: '#0B0C0E',
+              900: '#121417',
+              800: '#1A1D21',
+              700: '#262A30',
+              600: '#3A3F47',
+              500: '#5F6672',
+              100: '#F1F5F9',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            arabic: ['Cairo', 'Tajawal', 'sans-serif'],
+          },
+          animation: {
+            'marquee': 'marquee 25s linear infinite',
+            'marquee-rtl': 'marquee-rtl 25s linear infinite',
+          },
+          keyframes: {
+            marquee: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-50%)' },
+            },
+            'marquee-rtl': {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(50%)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap');
+
+    /* Custom Styles */
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    html[dir="rtl"] body {
+      font-family: 'Cairo', 'Tajawal', sans-serif;
+    }
+
+    /* Custom scrollbar for premium feel */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #121417;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #0AA89B;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #09968a;
+    }
+
+    /* Smooth transition for RTL layout flipping */
+    .rtl-flip {
+      transition: transform 0.3s ease;
+    }
+    html[dir="rtl"] .rtl-flip {
+      transform: scaleX(-1);
+    }
+    
+    /* Custom marquee stop on hover */
+    .marquee-container:hover .animate-marquee {
+      animation-play-state: paused;
+    }
+    .marquee-container:hover .animate-marquee-rtl {
+      animation-play-state: paused;
+    }
+
+    /* Glassmorphism utility */
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    /* Glowing badge */
+    .glow-teal {
+      box-shadow: 0 0 15px rgba(10, 168, 155, 0.3);
+    }
+  </style>
+</head>
+<body class="bg-white text-charcoal-900 transition-colors duration-300 antialiased overflow-x-hidden">
+
+  <!-- Header / Sticky Navigation -->
+  <div class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="navbar-wrapper">
+    <div class="h-1 bg-teal-brand"></div>
+    <header class="glass-nav border-b border-charcoal-100 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+        
+        <!-- Logo (Embedded SVG for crispness and coloring) -->
+        <a href="#home" class="flex items-center gap-2 text-charcoal-900 hover:opacity-90 transition-opacity flex-shrink-0" id="nav-logo-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1276 775" class="h-10 w-auto" role="img" aria-label="RIM.HSE Logo">
+            <title>RIM.HSE</title>
+            <g transform="translate(0,775) scale(0.1,-0.1)">
+              <!-- Emblem (Teal Accent #0AA89B) -->
+              <path fill="#0AA89B" stroke="none" d="M6070 7535 c-330 -57 -634 -190 -885 -387 -58 -46 -63 -56 -72 -150 l-6 -71 34 7 c196 39 479 22 648 -38 65 -24 76 -21 97 26 68 151 232 345 397 470 76 57 76 53 -7 117 -59 46 -77 48 -206 26z M6490 7504 c-30 -25 -56 -51 -57 -58 -2 -6 21 -27 49 -46 76 -50 236 -212 297 -300 29 -41 71 -108 93 -148 34 -62 44 -73 62 -69 11 3 64 16 117 30 144 38 310 52 450 38 167 -18 164 -18 162 -1 -1 8 -4 46 -8 83 -7 67 -7 68 -58 109 -268 213 -679 381 -987 404 l-65 5 -55 -47z M6338 7361 c-110 -123 -208 -291 -262 -453 -39 -116 -40 -114 67 -185 50 -33 126 -93 168 -131 l75 -70 60 55 c70 65 194 160 247 188 43 23 43 23 1 152 -50 154 -174 362 -272 456 l-39 38 -45 -50z M4935 6869 c-58 -9 -69 -21 -171 -172 -158 -234 -261 -490 -309 -771 -24 -141 -22 -155 33 -225 26 -33 50 -60 53 -61 4 0 31 33 61 73 109 144 290 299 442 378 36 19 66 39 66 44 0 6 -9 39 -21 75 -61 197 -74 446 -33 643 5 26 4 27 -33 26 -21 -1 -60 -5 -88 -10z M5110 6819 c0 -141 59 -370 134 -516 57 -112 45 -106 158 -83 53 11 150 24 215 28 l118 7 7 120 c3 66 16 162 27 214 24 110 32 97 -94 159 -151 75 -312 118 -477 129 l-88 6 0 -64z M7530 6875 c-8 -2 -49 -9 -90 -15 -148 -24 -431 -134 -446 -175 -3 -8 2 -49 11 -92 10 -43 20 -136 24 -208 l6 -130 120 -7 c66 -4 164 -17 218 -28 55 -12 101 -20 103 -18 2 2 24 44 49 93 63 124 111 280 130 419 23 178 26 166 -47 165 -35 -1 -70 -3 -78 -4z M7723 6844 c4 -22 9 -109 13 -194 7 -177 -7 -300 -51 -438 -15 -46 -25 -85 -23 -87 2 -1 27 -15 56 -29 175 -88 355 -242 465 -398 22 -32 44 -58 47 -58 7 0 70 74 93 111 15 23 16 36 6 105 -37 271 -128 532 -268 762 -73 119 -158 231 -184 241 -13 5 -54 12 -91 16 l-68 8 5 -39z M6010 6461 c0 -60 29 -243 41 -257 9 -11 98 -39 104 -32 1 2 13 23 25 47 16 33 20 49 12 65 -14 31 -138 186 -162 203 -19 13 -20 12 -20 -26z M6718 6463 c-46 -50 -116 -139 -133 -174 -13 -24 -12 -31 8 -70 12 -24 23 -46 25 -48 1 -3 26 3 56 12 l53 17 12 58 c13 60 27 242 19 242 -2 0 -20 -17 -40 -37z M5492 5968 c5 -16 162 -144 202 -165 27 -14 32 -13 77 8 27 12 49 25 49 29 0 4 -7 27 -16 53 -18 54 -29 59 -179 76 -117 14 -138 14 -133 -1z M7190 5975 c-8 -2 -54 -8 -101 -15 -47 -6 -90 -15 -96 -18 -9 -7 -46 -103 -40 -107 12 -11 89 -45 100 -45 28 0 227 160 227 182 0 8 -57 9 -90 3z M5060 5905 c-173 -63 -314 -146 -426 -250 l-59 -55 40 -36 c154 -141 393 -269 557 -299 31 -6 37 -4 43 14 11 35 117 177 189 251 l69 72 -61 61 c-68 70 -157 185 -187 240 -25 47 -40 47 -165 2z M7507 5843 c-36 -54 -83 -116 -103 -138 -21 -22 -51 -54 -67 -72 l-30 -32 72 -78 c40 -43 100 -120 133 -170 34 -51 68 -93 76 -93 28 0 197 62 276 101 96 48 212 128 280 192 l51 47 -60 56 c-66 61 -189 146 -275 189 -62 32 -242 95 -269 95 -11 0 -43 -37 -84 -97z M4485 5498 l-47 -63 6 -72 c14 -173 90 -430 180 -616 51 -104 181 -311 239 -379 19 -24 34 -29 101 -38 43 -5 81 -8 85 -6 4 3 1 47 -5 98 -27 198 -7 425 51 587 8 24 15 49 15 56 0 7 -30 29 -67 48 -156 82 -342 241 -444 379 -28 37 -55 68 -59 68 -5 0 -29 -28 -55 -62z M8180 5499 c-93 -132 -282 -295 -447 -385 -37 -20 -69 -38 -71 -40 -2 -1 8 -40 23 -86 52 -164 68 -379 44 -570 -7 -49 -10 -91 -7 -93 3 -3 40 0 84 5 93 12 91 10 209 185 166 247 287 574 319 865 7 55 6 55 -44 118 -28 34 -55 62 -59 62 -4 0 -27 -27 -51 -61z M5650 5369 c-40 -27 -93 -70 -119 -95 l-46 -46 100 5 c55 3 123 11 152 17 49 11 52 13 67 57 9 26 16 50 16 55 0 4 -22 19 -49 32 l-49 25 -72 -50z M6988 5389 l-37 -19 14 -47 c8 -27 22 -53 30 -60 23 -16 285 -48 285 -34 -1 16 -103 107 -175 155 -46 30 -66 31 -117 5z M6097 5022 c-41 -13 -48 -20 -57 -51 -15 -56 -35 -249 -26 -258 15 -14 186 194 186 225 0 9 -50 103 -53 101 -1 -1 -23 -9 -50 -17z M6594 4988 l-25 -50 34 -52 c49 -73 136 -176 149 -176 14 0 4 159 -15 239 -12 53 -13 54 -65 72 l-52 18 -26 -51z M5292 4988 c-22 -29 -94 -183 -118 -255 -35 -108 -64 -261 -64 -343 l0 -70 36 0 c64 0 242 30 332 56 66 19 312 128 312 138 0 1 -9 42 -20 92 -11 49 -23 146 -27 215 l-6 126 -116 7 c-64 4 -156 16 -206 27 -105 22 -110 23 -123 7z M7355 4980 c-44 -10 -135 -21 -202 -25 l-123 -7 0 -105 c0 -66 -8 -142 -21 -209 -12 -57 -19 -110 -16 -117 7 -18 177 -99 272 -130 101 -33 207 -54 312 -63 71 -6 83 -5 89 9 10 27 -23 254 -51 352 -15 50 -51 141 -81 203 -63 127 -49 120 -179 92z M6340 4641 c-58 -61 -130 -120 -212 -173 -58 -38 -78 -56 -78 -72 0 -63 101 -300 173 -405 55 -82 148 -191 162 -191 33 0 182 202 246 332 38 79 106 275 98 282 -2 2 -43 29 -91 60 -48 31 -123 90 -166 131 -44 41 -84 74 -88 74 -5 -1 -25 -18 -44 -38z M5805 4314 c-120 -45 -206 -58 -395 -58 -102 -1 -212 3 -244 7 l-59 9 6 -70 c4 -39 10 -79 14 -90 5 -11 37 -43 73 -70 275 -207 629 -350 957 -387 l63 -7 66 53 67 53 -25 20 c-14 12 -51 41 -82 65 -130 102 -285 291 -362 444 -27 52 -24 51 -79 31z M6870 4248 c-90 -164 -240 -337 -380 -440 -33 -23 -60 -46 -60 -50 0 -4 27 -30 61 -58 l61 -51 61 7 c286 29 609 149 862 319 178 120 174 116 182 214 l6 84 -34 -7 c-19 -4 -107 -9 -195 -13 -199 -7 -339 13 -508 73 -6 2 -31 -33 -56 -78z M6268 905 c-51 -19 -116 -65 -158 -112 -62 -70 -92 -210 -65 -303 9 -30 19 -66 22 -79 9 -37 101 -129 157 -156 73 -35 142 -46 216 -34 220 35 348 246 280 461 -20 63 -31 81 -84 134 -79 78 -143 104 -254 103 -42 0 -94 -7 -114 -14z"/>
+              <!-- Wordmark (Charcoal text, styled via currentColor) -->
+              <path fill="currentColor" stroke="none" d="M9645 2339 c-284 -38 -508 -179 -605 -381 -113 -235 -81 -523 76 -681 126 -128 232 -172 627 -261 137 -31 267 -64 290 -75 62 -28 98 -71 104 -125 15 -128 -92 -198 -298 -197 -161 0 -272 42 -352 131 -30 33 -53 71 -64 106 l-17 54 -259 0 -259 0 7 -52 c22 -159 97 -311 210 -423 174 -173 403 -256 715 -258 165 -1 266 12 395 54 215 68 380 218 445 400 42 121 45 307 5 418 -55 156 -207 281 -423 349 -53 17 -198 54 -322 82 -323 74 -380 108 -380 227 0 95 51 158 155 194 59 20 218 18 281 -4 92 -32 168 -118 189 -214 l7 -33 260 0 260 0 -7 58 c-9 74 -48 193 -88 262 -70 124 -227 250 -386 308 -157 57 -402 84 -566 61z M190 1261 l0 -1041 260 0 260 0 0 300 0 300 159 0 159 0 223 -300 223 -300 313 0 313 0 -105 138 c-349 456 -429 566 -417 570 56 18 193 136 258 222 38 50 89 164 108 241 21 85 21 258 0 352 -51 230 -223 415 -461 498 -149 51 -153 52 -740 56 l-553 4 0 -1040z m1088 545 c85 -39 146 -108 163 -180 29 -132 -34 -243 -177 -308 -46 -21 -66 -23 -302 -28 l-252 -5 0 278 0 278 253 -3 252 -3 63 -29z M2710 1260 l0 -1040 255 0 255 0 0 1040 0 1040 -255 0 -255 0 0 -1040z M3820 1260 l0 -1040 260 0 260 0 2 519 3 519 165 -256 c91 -141 195 -303 233 -359 l67 -104 141 3 141 3 109 170 c61 94 151 233 201 310 49 77 102 159 117 182 14 23 29 42 34 43 4 0 7 -232 7 -515 l0 -515 256 0 255 0 -3 102 c-2 58 -12 133 -23 172 -18 68 -18 71 0 145 17 70 19 137 22 869 l3 792 -192 0 -193 0 -365 -550 c-200 -303 -368 -550 -372 -550 -4 0 -173 248 -375 550 l-366 550 -194 0 -193 0 0 -1040z M6700 1520 c0 -768 0 -782 21 -843 25 -72 22 -183 -5 -235 -11 -22 -16 -59 -16 -127 l0 -95 260 0 260 0 0 390 0 390 425 0 425 0 0 -390 0 -390 260 0 260 0 0 1040 0 1040 -260 0 -260 0 -2 -417 -3 -418 -422 -3 -423 -2 0 420 0 420 -260 0 -260 0 0 -780z M11010 1260 l0 -1040 790 0 790 0 -2 222 -3 223 -527 3 -528 2 0 180 0 180 460 0 460 0 0 220 0 220 -460 0 -460 0 0 190 0 190 530 0 530 0 0 225 0 225 -790 0 -790 0 0 -1040z"/>
+            </g>
+          </svg>
+        </a>
+
+        <!-- Desktop Navigation Links (Responsive spacing, font sizes, transitions) -->
+        <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
+          <a data-i18n="nav-home" href="#home" class="text-charcoal-900 hover:text-teal-brand px-3 py-2 rounded-md text-sm font-semibold tracking-wide transition-colors">Home</a>
+          <a data-i18n="nav-services" href="#services" class="text-charcoal-500 hover:text-teal-brand px-3 py-2 rounded-md text-sm font-semibold tracking-wide transition-colors">Services</a>
+          <a data-i18n="nav-training" href="#training" class="text-charcoal-500 hover:text-teal-brand px-3 py-2 rounded-md text-sm font-semibold tracking-wide transition-colors">Training</a>
+          <a data-i18n="nav-about" href="#about" class="text-charcoal-500 hover:text-teal-brand px-3 py-2 rounded-md text-sm font-semibold tracking-wide transition-colors">About Us</a>
+          <a data-i18n="nav-clients" href="#clients" class="text-charcoal-500 hover:text-teal-brand px-3 py-2 rounded-md text-sm font-semibold tracking-wide transition-colors">Clients</a>
+          <a data-i18n="nav-lookup" href="#certificate" class="text-charcoal-500 hover:text-teal-brand px-3 py-2 rounded-md text-sm font-semibold tracking-wide transition-colors">Verify Certificate</a>
+          <a data-i18n="nav-contact" href="#contact" class="text-charcoal-500 hover:text-teal-brand px-3 py-2 rounded-md text-sm font-semibold tracking-wide transition-colors">Contact</a>
+        </nav>
+
+        <!-- Right Side: Language Pill & CTA -->
+        <div class="flex items-center gap-4">
+          <!-- Premium Language Switcher (Segmented Control style) -->
+          <div class="inline-flex items-center p-1 bg-charcoal-100 border border-slate-200/50 rounded-full text-xs">
+            <button onclick="switchLanguage('en')" id="lang-en" class="font-bold tracking-wider rounded-full px-3 py-1.5 transition-all bg-teal-brand text-white shadow-sm">EN</button>
+            <button onclick="switchLanguage('fr')" id="lang-fr" class="font-bold tracking-wider rounded-full px-3 py-1.5 transition-all text-charcoal-500 hover:text-charcoal-900">FR</button>
+            <button onclick="switchLanguage('ar')" id="lang-ar" class="font-bold tracking-wider rounded-full px-3 py-1.5 transition-all text-charcoal-500 hover:text-charcoal-900">AR</button>
+          </div>
+
+          <!-- Book Consultation CTA (Hidden on small mobile) -->
+          <a data-i18n="nav-cta" href="#contact" class="hidden sm:inline-flex bg-teal-brand hover:bg-teal-hover text-white font-bold px-5 py-2.5 rounded-full text-sm shadow-sm hover:shadow transition-all hover:-translate-y-0.5 active:translate-y-0">Book a Consultation</a>
+
+          <!-- Mobile menu button -->
+          <button onclick="toggleMobileMenu()" class="lg:hidden text-charcoal-900 hover:text-teal-brand focus:outline-none p-1 rounded-lg hover:bg-charcoal-100 transition-colors" aria-label="Toggle menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="hamburger-icon">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Mobile Drawer Menu (Slide out from side with backdrop) -->
+  <div id="mobile-menu" class="fixed inset-0 z-40 hidden transition-all duration-300">
+    <div class="fixed inset-0 bg-charcoal-950/40 backdrop-blur-sm" onclick="toggleMobileMenu()"></div>
+    <div class="fixed top-0 bottom-0 ltr:right-0 rtl:left-0 w-80 bg-white p-6 pt-24 flex flex-col gap-6 shadow-2xl border-l border-slate-100 transition-transform duration-300" id="mobile-menu-drawer">
+      <a data-i18n="nav-home" onclick="toggleMobileMenu()" href="#home" class="text-charcoal-900 hover:text-teal-brand text-lg font-bold block border-b border-slate-100 pb-3">Home</a>
+      <a data-i18n="nav-services" onclick="toggleMobileMenu()" href="#services" class="text-charcoal-500 hover:text-teal-brand text-lg font-bold block border-b border-slate-100 pb-3">Services</a>
+      <a data-i18n="nav-training" onclick="toggleMobileMenu()" href="#training" class="text-charcoal-500 hover:text-teal-brand text-lg font-bold block border-b border-slate-100 pb-3">Training</a>
+      <a data-i18n="nav-about" onclick="toggleMobileMenu()" href="#about" class="text-charcoal-500 hover:text-teal-brand text-lg font-bold block border-b border-slate-100 pb-3">About Us</a>
+      <a data-i18n="nav-clients" onclick="toggleMobileMenu()" href="#clients" class="text-charcoal-500 hover:text-teal-brand text-lg font-bold block border-b border-slate-100 pb-3">Clients</a>
+      <a data-i18n="nav-lookup" onclick="toggleMobileMenu()" href="#certificate" class="text-charcoal-500 hover:text-teal-brand text-lg font-bold block border-b border-slate-100 pb-3">Verify Certificate</a>
+      <a data-i18n="nav-contact" onclick="toggleMobileMenu()" href="#contact" class="text-charcoal-500 hover:text-teal-brand text-lg font-bold block border-b border-slate-100 pb-3">Contact</a>
+      <a data-i18n="nav-cta" onclick="toggleMobileMenu()" href="#contact" class="bg-teal-brand hover:bg-teal-hover text-white text-center font-bold py-3 rounded-xl shadow-sm transition-all mt-4">Book a Consultation</a>
+    </div>
+  </div>
+
+  <!-- Hero Section (Premium overlay, grid decoration, bold typography) -->
+  <section id="home" class="relative text-white min-h-screen flex items-center pt-20 overflow-hidden bg-charcoal-950">
+    <!-- Background Image with Dark Overlay -->
+    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1920&q=80');"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-charcoal-950/95 via-charcoal-900/85 to-charcoal-950/95 mix-blend-multiply"></div>
+    
+    <!-- Decorative Grid Overlay -->
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+    
+    <!-- Floating Light Orbs -->
+    <div class="absolute -top-40 left-1/3 w-96 h-96 bg-teal-brand/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute -bottom-40 right-10 w-80 h-80 bg-teal-brand/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 w-full relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Hero Text -->
+        <div class="lg:col-span-8 space-y-8 text-center ltr:lg:text-left rtl:lg:text-right">
+          <span data-i18n="hero-eyebrow" class="inline-flex items-center gap-2 font-semibold tracking-widest text-teal-brand uppercase text-xs bg-teal-brand/10 border border-teal-brand/20 px-4 py-2 rounded-full">
+            Established 2017 · Nouakchott, Mauritania
+          </span>
+          <h1 data-i18n="hero-title" class="font-bold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-tight tracking-tight text-white">
+            Elevating Industrial Safety Standards in Mauritania
+          </h1>
+          <p data-i18n="hero-sub" class="text-base sm:text-lg lg:text-xl text-slate-300 max-w-2xl mx-auto ltr:lg:mx-0 rtl:lg:mx-0 leading-relaxed">
+            Expert HSE consulting, training, and compliance services. Protecting your workforce, securing your operations, and ensuring regulatory excellence.
+          </p>
+          
+          <!-- Hero Actions -->
+          <div class="flex flex-wrap gap-4 items-center justify-center ltr:lg:justify-start rtl:lg:justify-start pt-2">
+            <a data-i18n="hero-btn-explore" href="#services" class="bg-teal-brand hover:bg-teal-hover text-white font-bold px-8 py-4 rounded-full transition-all shadow-lg hover:shadow-teal-brand/20 hover:-translate-y-0.5 active:translate-y-0 text-sm">Our Services</a>
+            <a data-i18n="hero-btn-verify" href="#certificate" class="border border-white/20 hover:border-teal-brand hover:bg-white/5 text-white font-bold px-8 py-4 rounded-full transition-all text-sm backdrop-blur-sm">Verify a Certificate</a>
+          </div>
+        </div>
+
+        <!-- Floating Info Card (Stats display) -->
+        <div class="lg:col-span-4 hidden lg:block">
+          <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 space-y-6 glow-teal">
+            <div class="border-b border-white/15 pb-4">
+              <h3 data-i18n="hero-stat-title" class="text-xs font-bold tracking-widest text-teal-brand uppercase">RIM-HSE at a Glance</h3>
+            </div>
+            <div class="space-y-4">
+              <div>
+                <div class="text-3xl font-black text-white">10,000+</div>
+                <div data-i18n="hero-stat-1" class="text-xs text-slate-400">Certified Professionals Trained</div>
+              </div>
+              <div>
+                <div class="text-3xl font-black text-white">150+</div>
+                <div data-i18n="hero-stat-2" class="text-xs text-slate-400">Corporate Clients Served</div>
+              </div>
+              <div>
+                <div class="text-3xl font-black text-white">100%</div>
+                <div data-i18n="hero-stat-3" class="text-xs text-slate-400">Compliance &amp; Quality Focus</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Propositions (Modern 3-column feature block) -->
+  <section class="py-20 bg-charcoal-100 border-b border-slate-200/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Value Item 1 -->
+        <div class="bg-white border border-slate-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+          <div class="w-14 h-14 bg-teal-brand/10 text-teal-brand rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+          </div>
+          <h3 data-i18n="card-training-title" class="font-bold text-xl text-charcoal-900 mb-3">Comprehensive Training</h3>
+          <p data-i18n="card-training-desc" class="text-sm text-charcoal-500 leading-relaxed">
+            HSE training programs tailored to local and international standards, ensuring your workforce is prepared and certified.
+          </p>
+        </div>
+
+        <!-- Value Item 2 -->
+        <div class="bg-white border border-slate-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+          <div class="w-14 h-14 bg-teal-brand/10 text-teal-brand rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <h3 data-i18n="card-compliance-title" class="font-bold text-xl text-charcoal-900 mb-3">Regulatory Mastery</h3>
+          <p data-i18n="card-compliance-desc" class="text-sm text-charcoal-500 leading-relaxed">
+            Navigating complex safety regulations with precision to ensure your business remains compliant and avoids liabilities.
+          </p>
+        </div>
+
+        <!-- Value Item 3 -->
+        <div class="bg-white border border-slate-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+          <div class="w-14 h-14 bg-teal-brand/10 text-teal-brand rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 data-i18n="card-safety-title" class="font-bold text-xl text-charcoal-900 mb-3">Operational Safety</h3>
+          <p data-i18n="card-safety-desc" class="text-sm text-charcoal-500 leading-relaxed">
+            Reducing workplace risk and increasing efficiency through proactive safety strategies, hazard analysis, and audits.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Services & Training Programs (Filterable, tabbed grid of cards) -->
+  <section id="services" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Heading -->
+      <div class="max-w-3xl mb-16 ltr:text-left rtl:text-right">
+        <span data-i18n="services-eyebrow" class="text-xs font-bold tracking-widest text-teal-brand uppercase bg-teal-brand/10 px-3 py-1.5 rounded-full">Our Services</span>
+        <h2 data-i18n="services-title" class="font-bold text-3xl sm:text-4xl text-charcoal-900 mt-4 mb-4">Professional HSE Solutions</h2>
+        <p data-i18n="services-desc" class="text-base sm:text-lg text-charcoal-500">
+          Comprehensive Health, Safety, and Environment services tailored to the industrial needs of Mauritania.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap gap-2 border-b border-slate-200 pb-6 mb-12">
+        <button onclick="filterServices('all')" id="tab-all" class="px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-teal-brand text-white shadow-sm">All Services</button>
+        <button onclick="filterServices('consulting')" id="tab-consulting" class="px-5 py-2.5 rounded-full text-sm font-semibold transition-all text-charcoal-500 hover:text-charcoal-900 hover:bg-charcoal-100">Consulting &amp; Compliance</button>
+        <button onclick="filterServices('equipment')" id="tab-equipment" class="px-5 py-2.5 rounded-full text-sm font-semibold transition-all text-charcoal-500 hover:text-charcoal-900 hover:bg-charcoal-100">Technical Equipment</button>
+        <button onclick="filterServices('training')" id="tab-training" class="px-5 py-2.5 rounded-full text-sm font-semibold transition-all text-charcoal-500 hover:text-charcoal-900 hover:bg-charcoal-100">Certified Training</button>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid">
+        
+        <!-- Service Card 1 (Consulting) -->
+        <div class="service-card bg-white border border-slate-200/60 rounded-3xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between" data-category="consulting">
+          <div>
+            <div class="w-12 h-12 bg-teal-brand/10 text-teal-brand rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+            </div>
+            <h3 data-i18n="service-1-title" class="font-bold text-xl text-charcoal-900 mb-3">ISO 45001 Consulting</h3>
+            <p data-i18n="service-1-desc" class="text-sm text-charcoal-500 leading-relaxed mb-6">
+              Gap analysis, auditing, and system design to align your operations with the global ISO 45001 Health and Safety Management standard.
+            </p>
+          </div>
+          <a href="#contact" class="text-teal-brand hover:text-teal-hover text-sm font-bold inline-flex items-center gap-1">
+            <span data-i18n="btn-learn-more">Learn More</span>
+            <svg class="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+
+        <!-- Service Card 2 (Consulting) -->
+        <div class="service-card bg-white border border-slate-200/60 rounded-3xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between" data-category="consulting">
+          <div>
+            <div class="w-12 h-12 bg-teal-brand/10 text-teal-brand rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+              </svg>
+            </div>
+            <h3 data-i18n="service-2-title" class="font-bold text-xl text-charcoal-900 mb-3">Risk Assessments</h3>
+            <p data-i18n="service-2-desc" class="text-sm text-charcoal-500 leading-relaxed mb-6">
+              Rigorous HAZID, HAZOP, and HIRA risk profiling for mining, logistics, and oil &amp; gas sectors to identify and mitigate operational hazards.
+            </p>
+          </div>
+          <a href="#contact" class="text-teal-brand hover:text-teal-hover text-sm font-bold inline-flex items-center gap-1">
+            <span data-i18n="btn-learn-more">Learn More</span>
+            <svg class="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+
+        <!-- Service Card 3 (Equipment) -->
+        <div class="service-card bg-white border border-slate-200/60 rounded-3xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between" data-category="equipment">
+          <div>
+            <div class="w-12 h-12 bg-teal-brand/10 text-teal-brand rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+            </div>
+            <h3 data-i18n="service-3-title" class="font-bold text-xl text-charcoal-900 mb-3">Safety Equipment Supply</h3>
+            <p data-i18n="service-3-desc" class="text-sm text-charcoal-500 leading-relaxed mb-6">
+              Procuring and maintaining high-quality PPE, calibrated gas detection equipment, and fire suppression systems for industrial projects.
+            </p>
+          </div>
+          <a href="#contact" class="text-teal-brand hover:text-teal-hover text-sm font-bold inline-flex items-center gap-1">
+            <span data-i18n="btn-learn-more">Learn More</span>
+            <svg class="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+
+        <!-- Service Card 4 (Training) -->
+        <div class="service-card bg-white border border-slate-200/60 rounded-3xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between" data-category="training">
+          <div>
+            <div class="w-12 h-12 bg-teal-brand/10 text-teal-brand rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+              </svg>
+            </div>
+            <h3 data-i18n="service-4-title" class="font-bold text-xl text-charcoal-900 mb-3">First Aid &amp; CPR</h3>
+            <p data-i18n="service-4-desc" class="text-sm text-charcoal-500 leading-relaxed mb-6">
+              Certified, hands-on training equipping your employees with critical lifesaving skills, CPR techniques, and emergency response procedures.
+            </p>
+          </div>
+          <a href="#contact" class="text-teal-brand hover:text-teal-hover text-sm font-bold inline-flex items-center gap-1">
+            <span data-i18n="btn-learn-more">Learn More</span>
+            <svg class="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+
+        <!-- Service Card 5 (Training) -->
+        <div class="service-card bg-white border border-slate-200/60 rounded-3xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between" data-category="training">
+          <div>
+            <div class="w-12 h-12 bg-teal-brand/10 text-teal-brand rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path>
+              </svg>
+            </div>
+            <h3 data-i18n="service-5-title" class="font-bold text-xl text-charcoal-900 mb-3">Working at Height</h3>
+            <p data-i18n="service-5-desc" class="text-sm text-charcoal-500 leading-relaxed mb-6">
+              Fall protection, scaffolding safety, and high-angle rescue training certified to international health and safety protocols.
+            </p>
+          </div>
+          <a href="#contact" class="text-teal-brand hover:text-teal-hover text-sm font-bold inline-flex items-center gap-1">
+            <span data-i18n="btn-learn-more">Learn More</span>
+            <svg class="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+
+        <!-- Service Card 6 (Training) -->
+        <div class="service-card bg-white border border-slate-200/60 rounded-3xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between" data-category="training">
+          <div>
+            <div class="w-12 h-12 bg-teal-brand/10 text-teal-brand rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343a7.975 7.975 0 012.343 5.657z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"></path>
+              </svg>
+            </div>
+            <h3 data-i18n="service-6-title" class="font-bold text-xl text-charcoal-900 mb-3">Fire Fighting &amp; Safety</h3>
+            <p data-i18n="service-6-desc" class="text-sm text-charcoal-500 leading-relaxed mb-6">
+              Industrial firefighting response, fire prevention strategies, extinguisher operations, and evacuation planning.
+            </p>
+          </div>
+          <a href="#contact" class="text-teal-brand hover:text-teal-hover text-sm font-bold inline-flex items-center gap-1">
+            <span data-i18n="btn-learn-more">Learn More</span>
+            <svg class="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Training Gallery / Highlight Section -->
+  <section id="training" class="py-20 bg-charcoal-100 border-t border-b border-slate-200/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Heading -->
+      <div class="max-w-3xl mb-16 ltr:text-left rtl:text-right">
+        <span data-i18n="training-eyebrow" class="text-xs font-bold tracking-widest text-teal-brand uppercase bg-teal-brand/10 px-3 py-1.5 rounded-full">Practical Competence</span>
+        <h2 data-i18n="training-title" class="font-bold text-3xl sm:text-4xl text-charcoal-900 mt-4 mb-4">Empowering Professionals</h2>
+        <p data-i18n="training-desc" class="text-base sm:text-lg text-charcoal-500">
+          Certified courses designed to enhance safety culture and build crucial lifesaving skills across Mauritania's industrial workforce.
+        </p>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Image 1 -->
+        <div class="group relative rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all h-72 bg-charcoal-950">
+          <img loading="lazy" src="https://lh3.googleusercontent.com/sitesv/AA5AbUBeLOfsIfA4Sb_KKYGwoX5wPqRBWQaVKcSF6tbcpzCah-Ha8FZgL8iF59KgK8OiJNjrv7_rEDXU3sAWd1-6i63iQQs5fC2s5_tubVxUlJ0qHEYfVfZvbV6KCJstt7wegBusVZatp4pFYKwzFy3iukO3OEy3gu94MVnl7Jbnf27yC1hCE_xbcfWv-rKiGpBlldXkUqdxDE_gd-SKLJc5_Z0YETeIvEXvDr8VGMR7=w1280" alt="First aid training session" class="w-full h-full object-cover opacity-85 transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950/90 via-charcoal-950/35 to-transparent flex flex-col justify-end p-6">
+            <span class="text-teal-brand text-xs font-bold uppercase tracking-wider mb-1">Safety First</span>
+            <h4 data-i18n="pic-1-title" class="font-bold text-white text-lg">First Aid Training</h4>
+          </div>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="group relative rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all h-72 bg-charcoal-950">
+          <img loading="lazy" src="https://lh3.googleusercontent.com/sitesv/AA5AbUArAEh--j9oeTC3eXNgf4GcTVM6B1ghgKJ-dOUzeK5-fygaYJjomLYF4bXGjU6nMsfL997TFx57_C4ULqc909itzfMhRI7og_io2Mvl_J3YbZqcxyB9D6dtK6IKut99d6LASqN2mR0qtksgCwZo8kf_I2pGyUZjC4f9g9VuDi8ivPWBlinGuUapR3y28OmZUw3F7eiPikNltd0679A3xxnSOsW4bNpbpEneDGSd=w1280" alt="Height safety training" class="w-full h-full object-cover opacity-85 transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950/90 via-charcoal-950/35 to-transparent flex flex-col justify-end p-6">
+            <span class="text-teal-brand text-xs font-bold uppercase tracking-wider mb-1">High Risk</span>
+            <h4 data-i18n="pic-2-title" class="font-bold text-white text-lg">Working at Height</h4>
+          </div>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="group relative rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all h-72 bg-charcoal-950">
+          <img loading="lazy" src="https://lh3.googleusercontent.com/sitesv/AA5AbUArAEh--j9oeTC3eXNgf4GcTVM6B1ghgKJ-dOUzeK5-fygaYJjomLYF4bXGjU6nMsfL997TFx57_C4ULqc909itzfMhRI7og_io2Mvl_J3YbZqcxyB9D6dtK6IKut99d6LASqN2mR0qtksgCwZo8kf_I2pGyUZjC4f9g9VuDi8ivPWBlinGuUapR3y28OmZUw3F7eiPikNltd0679A3xxnSOsW4bNpbpEneDGSd=w1280" alt="Risk Assessment training" class="w-full h-full object-cover opacity-85 transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950/90 via-charcoal-950/35 to-transparent flex flex-col justify-end p-6">
+            <span class="text-teal-brand text-xs font-bold uppercase tracking-wider mb-1">Audit</span>
+            <h4 data-i18n="pic-3-title" class="font-bold text-white text-lg">Risk Assessment</h4>
+          </div>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="group relative rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all h-72 bg-charcoal-950">
+          <img loading="lazy" src="https://lh3.googleusercontent.com/sitesv/AA5AbUCQjp8ny-mLjikZO_n_ER7QaZT_-dnDP2MdF3mMhzjutOcw_x-Kn4hKcH3HiFgweebmm0bkQDxbRGGPOTUnEaF6mIvGKker-KWK4gBkSiP-I6sKO978eCa-gxyP0Af_2yOZQxtIRpaJh31pYHXKulJ9wcok_DBqA9GkqGJmcGkn4Cs55INaMLlRlKq65flswEim0A3bN0Ghc_z0YcZyBVCzipR8snjOFJ6WOLYl=w1280" alt="Fire safety training" class="w-full h-full object-cover opacity-85 transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950/90 via-charcoal-950/35 to-transparent flex flex-col justify-end p-6">
+            <span class="text-teal-brand text-xs font-bold uppercase tracking-wider mb-1">Emergency</span>
+            <h4 data-i18n="pic-4-title" class="font-bold text-white text-lg">Fire Fighting</h4>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section (Journey, stats & split layout) -->
+  <section id="about" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        
+        <!-- Left Side: Texts -->
+        <div class="lg:col-span-6 space-y-6 ltr:text-left rtl:text-right">
+          <span data-i18n="about-eyebrow" class="text-xs font-bold tracking-widest text-teal-brand uppercase bg-teal-brand/10 px-3 py-1.5 rounded-full">About RIM-HSE</span>
+          <h2 data-i18n="about-title" class="font-bold text-3xl sm:text-4xl text-charcoal-900 leading-tight">Bridging International Standards with Local Operations</h2>
+          <p data-i18n="about-desc-1" class="text-base text-charcoal-500 leading-relaxed">
+            RIM-HSE (Réseau d'Ingénierie Mauritanien pour la Santé, la Sécurité et l'Environnement) is an established professional service company that champions international workplace safety cultures in Northwest Africa. By providing specialized training courses, system auditing, hazard identification, and advanced machinery inspections, we help both private firms and government institutions lower environmental risks and operational liabilities.
+          </p>
+          <p data-i18n="about-desc-2" class="text-base text-charcoal-500 leading-relaxed">
+            Since 2017, we have worked closely with industry leaders in mining, logistics, energy, and telecommunications to establish robust safety guidelines, train thousands of personnel, and verify regulatory compliance.
+          </p>
+
+          <!-- Core Values Mini-Grid -->
+          <div class="grid grid-cols-2 gap-4 pt-4 border-t border-slate-100">
+            <div class="flex items-start gap-3">
+              <div class="text-teal-brand mt-1 flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+              </div>
+              <div>
+                <h4 data-i18n="about-val-1-title" class="font-bold text-sm text-charcoal-900">Safety First</h4>
+                <p data-i18n="about-val-1-desc" class="text-xs text-charcoal-500">Protecting lives is our ultimate mission.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="text-teal-brand mt-1 flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+              </div>
+              <div>
+                <h4 data-i18n="about-val-2-title" class="font-bold text-sm text-charcoal-900">Local Expertise</h4>
+                <p data-i18n="about-val-2-desc" class="text-xs text-charcoal-500">Deep knowledge of Mauritanian operations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Double Image Grid with floating stats -->
+        <div class="lg:col-span-6 grid grid-cols-2 gap-6 relative">
+          <div class="space-y-6">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Industrial safety consultation" class="rounded-3xl shadow-md w-full h-56 sm:h-64 object-cover">
+            <div class="bg-teal-brand text-white p-6 rounded-3xl shadow-sm text-center">
+              <div class="text-3xl sm:text-4xl font-black mb-1">9+</div>
+              <div data-i18n="about-stat-years" class="text-xs font-semibold tracking-wide uppercase text-teal-light">Years of Excellence</div>
+            </div>
+          </div>
+          <div class="space-y-6 pt-12">
+            <div class="bg-charcoal-900 text-white p-6 rounded-3xl shadow-sm text-center">
+              <div class="text-3xl sm:text-4xl font-black mb-1">200+</div>
+              <div data-i18n="about-stat-clients" class="text-xs font-semibold tracking-wide uppercase text-slate-300">Corporate Clients</div>
+            </div>
+            <img loading="lazy" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80" alt="Rigging safety training" class="rounded-3xl shadow-md w-full h-56 sm:h-64 object-cover">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Clients & Partners (Infinite Moving Carousel with Custom SVG Logos) -->
+  <section id="clients" class="py-16 bg-charcoal-950 text-white overflow-hidden border-t border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center">
+      <span data-i18n="clients-eyebrow" class="text-xs font-bold tracking-widest text-teal-brand uppercase bg-teal-brand/10 px-3 py-1.5 rounded-full">Industry Leaders</span>
+      <h2 data-i18n="clients-title" class="font-bold text-2xl sm:text-3xl text-white mt-4">Trusted Across Mauritania</h2>
+    </div>
+
+    <!-- Infinite Scroll Container (Adapts dynamically to RTL/LTR) -->
+    <div class="relative w-full overflow-hidden marquee-container flex">
+      <div class="flex gap-16 whitespace-nowrap animate-marquee ltr:flex-row rtl:flex-row-reverse" id="marquee-track">
+        
+        <!-- Client Logo 1 (SNIM) -->
+        <div class="inline-flex items-center gap-3 text-slate-400 hover:text-teal-brand transition-colors duration-300">
+          <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          <span class="font-extrabold tracking-wider text-lg">SNIM MAURITANIE</span>
+        </div>
+        <!-- Client Logo 2 (Mauritel) -->
+        <div class="inline-flex items-center gap-3 text-slate-400 hover:text-teal-brand transition-colors duration-300">
+          <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M7 17V7l10 10V7"/></svg>
+          <span class="font-extrabold tracking-wider text-lg">MAURITEL TELECOM</span>
+        </div>
+        <!-- Client Logo 3 (BP) -->
+        <div class="inline-flex items-center gap-3 text-slate-400 hover:text-teal-brand transition-colors duration-300">
+          <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M3 12h18M12 3l9 9-9 9-9-9 9-9z"/></svg>
+          <span class="font-extrabold tracking-wider text-lg">BP EXPLORATION</span>
+        </div>
+        <!-- Client Logo 4 (Kinross) -->
+        <div class="inline-flex items-center gap-3 text-slate-400 hover:text-teal-brand transition-colors duration-300">
+          <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span class="font-extrabold tracking-wider text-lg">KINROSS TASIAST</span>
+        </div>
+        <!-- Client Logo 5 (Chinguitel) -->
+        <div class="inline-flex items-center gap-3 text-slate-400 hover:text-teal-brand transition-colors duration-300">
+          <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>
+          <span class="font-extrabold tracking-wider text-lg">CHINGUITEL</span>
+        </div>
+        <!-- Client Logo 6 (SOGECO) -->
+        <div class="inline-flex items-center gap-3 text-slate-400 hover:text-teal-brand transition-colors duration-300">
+          <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z"/></svg>
+          <span class="font-extrabold tracking-wider text-lg">SOGECO LOGISTICS</span>
+        </div>
+
+        <!-- Duplicated for Infinite Loop -->
+        <!-- Client Logo 1 (SNIM) -->
+        <div class="inline-flex items-center gap-3 text-slate-400 hover:text-teal-brand transition-colors duration-300">
+          <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          <span class="font-extrabold tracking-wider text-lg">SNIM MAURITANIE</span>
+        </div>
+        <!-- Client Logo 2 (Mauritel) -->
+        <div class="inline-flex items-center gap-3 text-slate-400 hover:text-teal-brand transition-colors duration-300">
+          <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M7 17V7l10 10V7"/></svg>
+          <span class="font-extrabold tracking-wider text-lg">MAURITEL TELECOM</span>
+        </div>
+        <!-- Client Logo 3 (BP) -->
+        <div class="inline-flex items-center gap-3 text-slate-400 hover:text-teal-brand transition-colors duration-300">
+          <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M3 12h18M12 3l9 9-9 9-9-9 9-9z"/></svg>
+          <span class="font-extrabold tracking-wider text-lg">BP EXPLORATION</span>
+        </div>
+        <!-- Client Logo 4 (Kinross) -->
+        <div class="inline-flex items-center gap-3 text-slate-400 hover:text-teal-brand transition-colors duration-300">
+          <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span class="font-extrabold tracking-wider text-lg">KINROSS TASIAST</span>
+        </div>
+        <!-- Client Logo 5 (Chinguitel) -->
+        <div class="inline-flex items-center gap-3 text-slate-400 hover:text-teal-brand transition-colors duration-300">
+          <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>
+          <span class="font-extrabold tracking-wider text-lg">CHINGUITEL</span>
+        </div>
+        <!-- Client Logo 6 (SOGECO) -->
+        <div class="inline-flex items-center gap-3 text-slate-400 hover:text-teal-brand transition-colors duration-300">
+          <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z"/></svg>
+          <span class="font-extrabold tracking-wider text-lg">SOGECO LOGISTICS</span>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificate Lookup Section (High interaction verification portal) -->
+  <section id="certificate" class="py-24 bg-charcoal-100 relative overflow-hidden">
+    <!-- Glowing Accent Orb -->
+    <div class="absolute bottom-0 left-10 w-96 h-96 bg-teal-brand/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Heading -->
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <span data-i18n="lookup-eyebrow" class="text-xs font-bold tracking-widest text-teal-brand uppercase bg-teal-brand/10 px-3 py-1.5 rounded-full">Security &amp; Credentials</span>
+        <h2 data-i18n="lookup-title" class="font-bold text-3xl sm:text-4xl text-charcoal-900 mt-4 mb-4">RIM-HSE Certificate Verification</h2>
+        <p data-i18n="lookup-desc" class="text-base sm:text-lg text-charcoal-500">
+          Verify the authenticity of safety and compliance certificates issued by RIM-HSE. Enter the certificate serial number to query our records instantly.
+        </p>
+      </div>
+
+      <!-- Verification Card -->
+      <div class="max-w-3xl mx-auto bg-charcoal-900 text-white rounded-3xl p-8 sm:p-12 shadow-xl border border-charcoal-800 relative overflow-hidden transition-all duration-500" style="background-image: radial-gradient(circle at 50% 0%, rgba(10, 168, 155, 0.12), transparent 70%);">
+        
+        <!-- Background decorative badge -->
+        <div class="absolute top-4 ltr:right-4 rtl:left-4 opacity-5 text-teal-brand pointer-events-none">
+          <svg class="w-48 h-48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
+        </div>
+
+        <div class="relative z-10 flex flex-col items-center w-full">
+          <!-- Icon -->
+          <div class="w-16 h-16 bg-teal-brand/10 text-teal-brand rounded-full flex items-center justify-center mb-6 border border-teal-brand/20">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          
+          <h3 data-i18n="lookup-card-title" class="font-bold text-2xl text-center mb-2">Query Verification Database</h3>
+          <p data-i18n="lookup-card-desc" class="text-xs sm:text-sm text-slate-400 mb-8 text-center max-w-md">
+            Input the serial code as printed on the certificate (e.g. HSE-2026-001).
+          </p>
+
+          <!-- Input Group -->
+          <div class="w-full flex flex-col sm:flex-row gap-3 mb-6">
+            <input id="certIdInput" type="text" data-i18n-placeholder="lookup-placeholder" placeholder="Enter Certificate ID..." class="flex-1 px-4 py-3.5 rounded-xl bg-charcoal-950 border border-charcoal-700 text-white focus:outline-none focus:ring-2 focus:ring-teal-brand text-sm tracking-wider">
+            <button onclick="handleVerifyCert()" class="bg-teal-brand hover:bg-teal-hover text-white font-bold px-8 py-3.5 rounded-xl text-sm transition-all flex items-center justify-center gap-2 flex-shrink-0 shadow-lg shadow-teal-brand/20">
+              <span data-i18n="lookup-btn">Verify Now</span>
+            </button>
+          </div>
+
+          <!-- Direct ledger link -->
+          <a data-i18n="lookup-ledger-link" href="https://script.google.com/macros/s/AKfycbw_4OvHEVfvzh-2ldaw4TywfjwgJ16Rjasb2IURRTeLmW-bQjM4nm4kC__oI4gW7pG2/exec" target="_blank" rel="noopener" class="text-xs text-teal-brand hover:underline flex items-center gap-1">
+            Official Apps Script Ledger Database →
+          </a>
+        </div>
+
+        <!-- Inline Results Card (Renders dynamically with transition) -->
+        <div id="certResultContainer" class="hidden mt-8 pt-8 border-t border-slate-700/50 w-full transition-all duration-500">
+          <!-- Verified Certificate Badge Design -->
+          <div class="bg-charcoal-950/70 border-2 border-dashed border-teal-brand/30 rounded-2xl p-6 relative overflow-hidden">
+            <!-- Ribbon watermark -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-teal-brand/5 rounded-full blur-xl"></div>
+            
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-800 pb-4 mb-4">
+              <div>
+                <span class="text-[10px] font-mono font-bold tracking-widest text-teal-brand uppercase block mb-1">Official Verification Badge</span>
+                <h4 class="font-bold text-lg text-white" id="resCourse">First Aid &amp; CPR (Advanced)</h4>
+              </div>
+              <div class="bg-teal-brand/10 text-teal-brand border border-teal-brand/20 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+                <svg class="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span id="certStatusMsg">ACTIVE &amp; VALID</span>
+              </div>
+            </div>
+
+            <!-- Certificate Details -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+              <div class="space-y-1">
+                <span class="text-slate-400 font-medium block">Student Name:</span>
+                <span class="text-white font-bold text-sm block" id="resStudent">Amadou Diallo</span>
+              </div>
+              <div class="space-y-1">
+                <span class="text-slate-400 font-medium block">Certificate Serial:</span>
+                <span class="text-teal-brand font-mono font-bold text-sm block" id="resCertId">HSE-2026-001</span>
+              </div>
+              <div class="space-y-1">
+                <span class="text-slate-400 font-medium block">Issued Date:</span>
+                <span class="text-white font-semibold block" id="resIssueDate">January 14, 2026</span>
+              </div>
+              <div class="space-y-1">
+                <span class="text-slate-400 font-medium block">Expiration Date:</span>
+                <span class="text-white font-semibold block" id="resExpiryDate">January 13, 2028</span>
+              </div>
+            </div>
+
+            <!-- Print/Verify Simulation Button -->
+            <div class="mt-6 pt-4 border-t border-slate-800 flex justify-end">
+              <button onclick="window.print()" class="text-xs bg-white/10 hover:bg-white/15 text-white border border-white/10 px-4 py-2 rounded-lg font-bold transition-all flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                Print Verification
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Demo Certificates Pill Guide -->
+      <div class="max-w-2xl mx-auto mt-8 border border-slate-200 rounded-3xl p-6 bg-white shadow-sm">
+        <h4 class="font-bold text-charcoal-900 text-sm mb-3">Try Verification with Sample Codes:</h4>
+        <div class="flex flex-wrap gap-2">
+          <button onclick="fillCode('HSE-2026-001')" class="font-mono text-xs font-bold bg-slate-50 hover:bg-teal-brand/10 border border-slate-200 hover:border-teal-brand text-charcoal-600 hover:text-teal-brand px-4 py-2 rounded-xl transition-all">HSE-2026-001</button>
+          <button onclick="fillCode('HSE-FA-882')" class="font-mono text-xs font-bold bg-slate-50 hover:bg-teal-brand/10 border border-slate-200 hover:border-teal-brand text-charcoal-600 hover:text-teal-brand px-4 py-2 rounded-xl transition-all">HSE-FA-882</button>
+          <button onclick="fillCode('HSE-WAH-105')" class="font-mono text-xs font-bold bg-slate-50 hover:bg-teal-brand/10 border border-slate-200 hover:border-teal-brand text-charcoal-600 hover:text-teal-brand px-4 py-2 rounded-xl transition-all">HSE-WAH-105</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact & Booking Section (Map & Form Split) -->
+  <section id="contact" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+        
+        <!-- Left Side: Contact Information & Channels -->
+        <div class="lg:col-span-5 space-y-8 ltr:text-left rtl:text-right">
+          <div>
+            <span data-i18n="contact-eyebrow" class="text-xs font-bold tracking-widest text-teal-brand uppercase bg-teal-brand/10 px-3 py-1.5 rounded-full">Contact Us</span>
+            <h2 data-i18n="contact-title" class="font-bold text-3xl sm:text-4xl text-charcoal-900 mt-4 mb-4">Get in Touch Today</h2>
+            <p data-i18n="contact-desc" class="text-base text-charcoal-500">
+              Ready to discuss your safety auditing needs, arrange specialized corporate training, or inspect your safety gear? Reach out to our team now.
+            </p>
+          </div>
+
+          <div class="space-y-6">
+            <!-- Email -->
+            <div class="flex items-start gap-4">
+              <span class="w-12 h-12 rounded-2xl bg-teal-brand/10 text-teal-brand flex items-center justify-center flex-shrink-0 border border-teal-brand/10">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              </span>
+              <div>
+                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Email Address</div>
+                <a href="mailto:enquiries@rim-hse.com" class="text-charcoal-900 font-bold text-base hover:text-teal-brand transition-colors">enquiries@rim-hse.com</a>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="flex items-start gap-4">
+              <span class="w-12 h-12 rounded-2xl bg-teal-brand/10 text-teal-brand flex items-center justify-center flex-shrink-0 border border-teal-brand/10">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 011.94.375L9.42 8.25a1 1 0 01-.679.92l-2.28.76a10.005 10.005 0 005.47 5.47l.76-2.28a1 1 0 01.92-.679l3.19-.45a1 1 0 011.02.812l.62 3.2c.075.385-.05.783-.326 1.08l-2.28 2.28a1.996 1.996 0 01-3.072 0l-5.32-5.32a1.996 1.996 0 010-3.072l2.28-2.28z"></path></svg>
+              </span>
+              <div>
+                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Phone Number</div>
+                <a href="tel:+22248156330" class="text-charcoal-900 font-bold text-base hover:text-teal-brand transition-colors">+222 48 15 63 30</a>
+              </div>
+            </div>
+
+            <!-- Address -->
+            <div class="flex items-start gap-4">
+              <span class="w-12 h-12 rounded-2xl bg-teal-brand/10 text-teal-brand flex items-center justify-center flex-shrink-0 border border-teal-brand/10">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+              </span>
+              <div>
+                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Location</div>
+                <span data-i18n="contact-address" class="text-charcoal-900 font-bold text-sm block leading-relaxed mt-1">Avenue Président Yasser Arafat, ZRB 32, BP 2852 – Nouakchott, Mauritania</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- WhatsApp Connect Button -->
+          <div class="pt-4">
+            <a href="https://wa.me/22248156330" target="_blank" rel="noopener" class="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20ba5a] text-[#052c16] font-bold px-8 py-4 rounded-full transition-all shadow-md hover:shadow-green-200/50">
+              <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24" class="rtl-flip"><path d="M.06 24l1.7-6.16A11.86 11.86 0 0 1 .15 11.9C.15 5.34 5.49 0 12.06 0a11.82 11.82 0 0 1 8.41 3.5 11.82 11.82 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.13c1.68.99 3.28 1.59 5.45 1.59 5.45 0 9.9-4.43 9.9-9.88 0-5.46-4.43-9.9-9.9-9.9-5.46 0-9.9 4.44-9.9 9.9 0 2.28.67 3.99 1.79 5.79l-1.01 3.66 3.67-.96zm10.95-5.49c-.07-.12-.27-.2-.57-.35-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41z"></path></svg>
+              <span data-i18n="contact-whatsapp">Chat on WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Side: Contact Form -->
+        <div class="lg:col-span-7 bg-charcoal-100 border border-slate-200/50 rounded-3xl p-8 sm:p-10 shadow-sm relative">
+          <form id="inquiryForm" onsubmit="handleInquirySubmit(event)" class="space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label data-i18n="form-name" class="block text-xs font-bold tracking-wider text-charcoal-600 uppercase mb-2">Full Name</label>
+                <input required type="text" name="name" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-teal-brand text-sm transition-all">
+              </div>
+              <div>
+                <label data-i18n="form-email" class="block text-xs font-bold tracking-wider text-charcoal-600 uppercase mb-2">Email Address</label>
+                <input required type="email" name="email" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-teal-brand text-sm transition-all">
+              </div>
+            </div>
+            <div>
+              <label data-i18n="form-phone" class="block text-xs font-bold tracking-wider text-charcoal-600 uppercase mb-2">Phone Number</label>
+              <input type="text" name="phone" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-teal-brand text-sm transition-all">
+            </div>
+            <div>
+              <label data-i18n="form-msg" class="block text-xs font-bold tracking-wider text-charcoal-600 uppercase mb-2">Your Message</label>
+              <textarea required rows="5" name="message" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-teal-brand text-sm transition-all"></textarea>
+            </div>
+            
+            <!-- Honeypot anti-spam -->
+            <input type="text" name="_honeypot" class="hidden">
+
+            <button type="submit" class="w-full bg-teal-brand hover:bg-teal-hover text-white font-bold py-4 rounded-xl text-sm transition-all shadow-lg hover:shadow-teal-brand/20 hover:-translate-y-0.5 active:translate-y-0">
+              <span data-i18n="form-submit">Send Inquiry</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (Dark theme, multi-column, copyright) -->
+  <footer class="bg-charcoal-950 text-slate-400 py-16 border-t border-white/5 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-white/5">
+        
+        <!-- Column 1: Branding -->
+        <div class="md:col-span-5 space-y-6">
+          <a href="#home" class="flex items-center gap-2 text-white hover:opacity-90 transition-opacity">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1276 775" class="h-8 w-auto" role="img" aria-label="RIM.HSE Logo">
+              <title>RIM.HSE</title>
+              <g transform="translate(0,775) scale(0.1,-0.1)">
+                <path fill="#0AA89B" stroke="none" d="M6070 7535 c-330 -57 -634 -190 -885 -387 -58 -46 -63 -56 -72 -150 l-6 -71 34 7 c196 39 479 22 648 -38 65 -24 76 -21 97 26 68 151 232 345 397 470 76 57 76 53 -7 117 -59 46 -77 48 -206 26z M6490 7504 c-30 -25 -56 -51 -57 -58 -2 -6 21 -27 49 -46 76 -50 236 -212 297 -300 29 -41 71 -108 93 -148 34 -62 44 -73 62 -69 11 3 64 16 117 30 144 38 310 52 450 38 167 -18 164 -18 162 -1 -1 8 -4 46 -8 83 -7 67 -7 68 -58 109 -268 213 -679 381 -987 404 l-65 5 -55 -47z M6338 7361 c-110 -123 -208 -291 -262 -453 -39 -116 -40 -114 67 -185 50 -33 126 -93 168 -131 l75 -70 60 55 c70 65 194 160 247 188 43 23 43 23 1 152 -50 154 -174 362 -272 456 l-39 38 -45 -50z M4935 6869 c-58 -9 -69 -21 -171 -172 -158 -234 -261 -490 -309 -771 -24 -141 -22 -155 33 -225 26 -33 50 -60 53 -61 4 0 31 33 61 73 109 144 290 299 442 378 36 19 66 39 66 44 0 6 -9 39 -21 75 -61 197 -74 446 -33 643 5 26 4 27 -33 26 -21 -1 -60 -5 -88 -10z M5110 6819 c0 -141 59 -370 134 -516 57 -112 45 -106 158 -83 53 11 150 24 215 28 l118 7 7 120 c3 66 16 162 27 214 24 110 32 97 -94 159 -151 75 -312 118 -477 129 l-88 6 0 -64z M7530 6875 c-8 -2 -49 -9 -90 -15 -148 -24 -431 -134 -446 -175 -3 -8 2 -49 11 -92 10 -43 20 -136 24 -208 l6 -130 120 -7 c66 -4 164 -17 218 -28 55 -12 101 -20 103 -18 2 2 24 44 49 93 63 124 111 280 130 419 23 178 26 166 -47 165 -35 -1 -70 -3 -78 -4z M7723 6844 c4 -22 9 -109 13 -194 7 -177 -7 -300 -51 -438 -15 -46 -25 -85 -23 -87 2 -1 27 -15 56 -29 175 -88 355 -242 465 -398 22 -32 44 -58 47 -58 7 0 70 74 93 111 15 23 16 36 6 105 -37 271 -128 532 -268 762 -73 119 -158 231 -184 241 -13 5 -54 12 -91 16 l-68 8 5 -39z M6010 6461 c0 -60 29 -243 41 -257 9 -11 98 -39 104 -32 1 2 13 23 25 47 16 33 20 49 12 65 -14 31 -138 186 -162 203 -19 13 -20 12 -20 -26z M6718 6463 c-46 -50 -116 -139 -133 -174 -13 -24 -12 -31 8 -70 12 -24 23 -46 25 -48 1 -3 26 3 56 12 l53 17 12 58 c13 60 27 242 19 242 -2 0 -20 -17 -40 -37z M5492 5968 c5 -16 162 -144 202 -165 27 -14 32 -13 77 8 27 12 49 25 49 29 0 4 -7 27 -16 53 -18 54 -29 59 -179 76 -117 14 -138 14 -133 -1z M7190 5975 c-8 -2 -54 -8 -101 -15 -47 -6 -90 -15 -96 -18 -9 -7 -46 -103 -40 -107 12 -11 89 -45 100 -45 28 0 227 160 227 182 0 8 -57 9 -90 3z M5060 5905 c-173 -63 -314 -146 -426 -250 l-59 -55 40 -36 c154 -141 393 -269 557 -299 31 -6 37 -4 43 14 11 35 117 177 189 251 l69 72 -61 61 c-68 70 -157 185 -187 240 -25 47 -40 47 -165 2z M7507 5843 c-36 -54 -83 -116 -103 -138 -21 -22 -51 -54 -67 -72 l-30 -32 72 -78 c40 -43 100 -120 133 -170 34 -51 68 -93 76 -93 28 0 197 62 276 101 96 48 212 128 280 192 l51 47 -60 56 c-66 61 -189 146 -275 189 -62 32 -242 95 -269 95 -11 0 -43 -37 -84 -97z M4485 5498 l-47 -63 6 -72 c14 -173 90 -430 180 -616 51 -104 181 -311 239 -379 19 -24 34 -29 101 -38 43 -5 81 -8 85 -6 4 3 1 47 -5 98 -27 198 -7 425 51 587 8 24 15 49 15 56 0 7 -30 29 -67 48 -156 82 -342 241 -444 379 -28 37 -55 68 -59 68 -5 0 -29 -28 -55 -62z M8180 5499 c-93 -132 -282 -295 -447 -385 -37 -20 -69 -38 -71 -40 -2 -1 8 -40 23 -86 52 -164 68 -379 44 -570 -7 -49 -10 -91 -7 -93 3 -3 40 0 84 5 93 12 91 10 209 185 166 247 287 574 319 865 7 55 6 55 -44 118 -28 34 -55 62 -59 62 -4 0 -27 -27 -51 -61z M5650 5369 c-40 -27 -93 -70 -119 -95 l-46 -46 100 5 c55 3 123 11 152 17 49 11 52 13 67 57 9 26 16 50 16 55 0 4 -22 19 -49 32 l-49 25 -72 -50z M6988 5389 l-37 -19 14 -47 c8 -27 22 -53 30 -60 23 -16 285 -48 285 -34 -1 16 -103 107 -175 155 -46 30 -66 31 -117 5z M6097 5022 c-41 -13 -48 -20 -57 -51 -15 -56 -35 -249 -26 -258 15 -14 186 194 186 225 0 9 -50 103 -53 101 -1 -1 -23 -9 -50 -17z M6594 4988 l-25 -50 34 -52 c49 -73 136 -176 149 -176 14 0 4 159 -15 239 -12 53 -13 54 -65 72 l-52 18 -26 -51z M5292 4988 c-22 -29 -94 -183 -118 -255 -35 -108 -64 -261 -64 -343 l0 -70 36 0 c64 0 242 30 332 56 66 19 312 128 312 138 0 1 -9 42 -20 92 -11 49 -23 146 -27 215 l-6 126 -116 7 c-64 4 -156 16 -206 27 -105 22 -110 23 -123 7z M7355 4980 c-44 -10 -135 -21 -202 -25 l-123 -7 0 -105 c0 -66 -8 -142 -21 -209 -12 -57 -19 -110 -16 -117 7 -18 177 -99 272 -130 101 -33 207 -54 312 -63 71 -6 83 -5 89 9 10 27 -23 254 -51 352 -15 50 -51 141 -81 203 -63 127 -49 120 -179 92z M6340 4641 c-58 -61 -130 -120 -212 -173 -58 -38 -78 -56 -78 -72 0 -63 101 -300 173 -405 55 -82 148 -191 162 -191 33 0 182 202 246 332 38 79 106 275 98 282 -2 2 -43 29 -91 60 -48 31 -123 90 -166 131 -44 41 -84 74 -88 74 -5 -1 -25 -18 -44 -38z M5805 4314 c-120 -45 -206 -58 -395 -58 -102 -1 -212 3 -244 7 l-59 9 6 -70 c4 -39 10 -79 14 -90 5 -11 37 -43 73 -70 275 -207 629 -350 957 -387 l63 -7 66 53 67 53 -25 20 c-14 12 -51 41 -82 65 -130 102 -285 291 -362 444 -27 52 -24 51 -79 31z M6870 4248 c-90 -164 -240 -337 -380 -440 -33 -23 -60 -46 -60 -50 0 -4 27 -30 61 -58 l61 -51 61 7 c286 29 609 149 862 319 178 120 174 116 182 214 l6 84 -34 -7 c-19 -4 -107 -9 -195 -13 -199 -7 -339 13 -508 73 -6 2 -31 -33 -56 -78z M6268 905 c-51 -19 -116 -65 -158 -112 -62 -70 -92 -210 -65 -303 9 -30 19 -66 22 -79 9 -37 101 -129 157 -156 73 -35 142 -46 216 -34 220 35 348 246 280 461 -20 63 -31 81 -84 134 -79 78 -143 104 -254 103 -42 0 -94 -7 -114 -14z"/>
+                <path fill="#FFFFFF" stroke="none" d="M9645 2339 c-284 -38 -508 -179 -605 -381 -113 -235 -81 -523 76 -681 126 -128 232 -172 627 -261 137 -31 267 -64 290 -75 62 -28 98 -71 104 -125 15 -128 -92 -198 -298 -197 -161 0 -272 42 -352 131 -30 33 -53 71 -64 106 l-17 54 -259 0 -259 0 7 -52 c22 -159 97 -311 210 -423 174 -173 403 -256 715 -258 165 -1 266 12 395 54 215 68 380 218 445 400 42 121 45 307 5 418 -55 156 -207 281 -423 349 -53 17 -198 54 -322 82 -323 74 -380 108 -380 227 0 95 51 158 155 194 59 20 218 18 281 -4 92 -32 168 -118 189 -214 l7 -33 260 0 260 0 -7 58 c-9 74 -48 193 -88 262 -70 124 -227 250 -386 308 -157 57 -402 84 -566 61z M190 1261 l0 -1041 260 0 260 0 0 300 0 300 159 0 159 0 223 -300 223 -300 313 0 313 0 -105 138 c-349 456 -429 566 -417 570 56 18 193 136 258 222 38 50 89 164 108 241 21 85 21 258 0 352 -51 230 -223 415 -461 498 -149 51 -153 52 -740 56 l-553 4 0 -1040z m1088 545 c85 -39 146 -108 163 -180 29 -132 -34 -243 -177 -308 -46 -21 -66 -23 -302 -28 l-252 -5 0 278 0 278 253 -3 252 -3 63 -29z M2710 1260 l0 -1040 255 0 255 0 0 1040 0 1040 -255 0 -255 0 0 -1040z M3820 1260 l0 -1040 260 0 260 0 2 519 3 519 165 -256 c91 -141 195 -303 233 -359 l67 -104 141 3 141 3 109 170 c61 94 151 233 201 310 49 77 102 159 117 182 14 23 29 42 34 43 4 0 7 -232 7 -515 l0 -515 256 0 255 0 -3 102 c-2 58 -12 133 -23 172 -18 68 -18 71 0 145 17 70 19 137 22 869 l3 792 -192 0 -193 0 -365 -550 c-200 -303 -368 -550 -372 -550 -4 0 -173 248 -375 550 l-366 550 -194 0 -193 0 0 -1040z M6700 1520 c0 -768 0 -782 21 -843 25 -72 22 -183 -5 -235 -11 -22 -16 -59 -16 -127 l0 -95 260 0 260 0 0 390 0 390 425 0 425 0 0 -390 0 -390 260 0 260 0 0 1040 0 1040 -260 0 -260 0 -2 -417 -3 -418 -422 -3 -423 -2 0 420 0 420 -260 0 -260 0 0 -780z M11010 1260 l0 -1040 790 0 790 0 -2 222 -3 223 -527 3 -528 2 0 180 0 180 460 0 460 0 0 220 0 220 -460 0 -460 0 0 190 0 190 530 0 530 0 0 225 0 225 -790 0 -790 0 0 -1040z"/>
+              </g>
+            </svg>
+          </a>
+          <p data-i18n="footer-desc" class="text-slate-400 max-w-md leading-relaxed">
+            Health, Safety &amp; Environment training and consulting — elevating industrial safety standards in Mauritania since 2017.
+          </p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="md:col-span-3 space-y-4">
+          <h4 data-i18n="footer-links-title" class="text-white font-bold tracking-wider uppercase text-xs">Quick Links</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="#home" class="hover:text-teal-brand transition-colors">Home</a></li>
+            <li><a href="#services" class="hover:text-teal-brand transition-colors">Our Services</a></li>
+            <li><a href="#training" class="hover:text-teal-brand transition-colors">Training Programs</a></li>
+            <li><a href="#about" class="hover:text-teal-brand transition-colors">About Us</a></li>
+            <li><a href="#certificate" class="hover:text-teal-brand transition-colors">Verify Certificate</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact details -->
+        <div class="md:col-span-4 space-y-4">
+          <h4 data-i18n="footer-contact-title" class="text-white font-bold tracking-wider uppercase text-xs">Head Office</h4>
+          <p class="text-xs leading-relaxed text-slate-400">
+            Avenue Président Yasser Arafat, ZRB 32, BP 2852<br>
+            Nouakchott, Mauritania
+          </p>
+          <div class="text-xs space-y-1">
+            <p>Email: <a href="mailto:enquiries@rim-hse.com" class="text-teal-brand hover:underline">enquiries@rim-hse.com</a></p>
+            <p>Phone: <a href="tel:+22248156330" class="text-teal-brand hover:underline">+222 48 15 63 30</a></p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright & Ledger Indicator -->
+      <div class="mt-8 pt-8 text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+        <span>© 2026 RIM-HSE. All Rights Reserved. &nbsp;·&nbsp; Registered in Mauritania.</span>
+        <span class="flex items-center gap-1.5 text-[10px] bg-white/5 border border-white/5 px-2.5 py-1 rounded-full">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          Secure Certification Verification Ledger Active
+        </span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Custom Alert Success/Error Modal (Replaces browser alert() popup) -->
+  <div id="customAlertModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-charcoal-950/70 backdrop-blur-sm hidden">
+    <div class="bg-white rounded-3xl shadow-2xl max-w-md w-full p-6 sm:p-8 text-center border-t-4 border-t-teal-brand transition-all duration-300 transform scale-95 opacity-0" id="customAlertContent">
+      <div id="modalIcon" class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 bg-teal-brand/10 text-teal-brand">
+        <!-- Success Checkmark SVG -->
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+      </div>
+      <h3 id="modalTitle" class="font-bold text-xl text-charcoal-900 mb-3">Notification</h3>
+      <p id="modalMessage" class="text-sm text-charcoal-500 leading-relaxed mb-8">Action processed successfully.</p>
+      <button onclick="closeCustomAlert()" class="w-full bg-charcoal-900 hover:bg-charcoal-800 text-white font-bold py-3.5 rounded-xl text-sm transition-all shadow-sm">
+        Close
+      </button>
+    </div>
+  </div>
+
+  <!-- Translation Dictionaries & Interactive Logic -->
+  <script>
+    // Translation Database (EN, FR, AR)
+    const translations = {
+      en: {
+        "nav-home": "Home",
+        "nav-services": "Services",
+        "nav-training": "Training",
+        "nav-about": "About Us",
+        "nav-clients": "Clients",
+        "nav-lookup": "Verify Certificate",
+        "nav-contact": "Contact",
+        "nav-cta": "Book a Consultation",
+        "hero-eyebrow": "Established 2017 · Nouakchott, Mauritania",
+        "hero-title": "Elevating Industrial Safety Standards in Mauritania",
+        "hero-sub": "Expert HSE consulting, training, and compliance services. Protecting your workforce, securing your operations, and ensuring regulatory excellence.",
+        "hero-btn-explore": "Our Services",
+        "hero-btn-verify": "Verify a Certificate",
+        "hero-stat-title": "RIM-HSE at a Glance",
+        "hero-stat-1": "Certified Professionals Trained",
+        "hero-stat-2": "Corporate Clients Served",
+        "hero-stat-3": "Compliance & Quality Focus",
+        "card-training-title": "Comprehensive Training",
+        "card-training-desc": "HSE training programs tailored to local and international standards, ensuring your workforce is prepared and certified.",
+        "card-compliance-title": "Regulatory Mastery",
+        "card-compliance-desc": "Navigating complex safety regulations with precision to ensure your business remains compliant and avoids liabilities.",
+        "card-safety-title": "Operational Safety",
+        "card-safety-desc": "Reducing workplace risk and increasing efficiency through proactive safety strategies, hazard analysis, and audits.",
+        "services-eyebrow": "Our Services",
+        "services-title": "Professional HSE Solutions",
+        "services-desc": "Comprehensive Health, Safety, and Environment services tailored to the industrial needs of Mauritania.",
+        "btn-learn-more": "Learn More",
+        "service-1-title": "ISO 45001 Consulting",
+        "service-1-desc": "Gap analysis, auditing, and system design to align your operations with the global ISO 45001 Health and Safety Management standard.",
+        "service-2-title": "Risk Assessments",
+        "service-2-desc": "Rigorous HAZID, HAZOP, and HIRA risk profiling for mining, logistics, and oil & gas sectors to identify and mitigate operational hazards.",
+        "service-3-title": "Safety Equipment Supply",
+        "service-3-desc": "Procuring and maintaining high-quality PPE, calibrated gas detection equipment, and fire suppression systems for industrial projects.",
+        "service-4-title": "First Aid & CPR",
+        "service-4-desc": "Certified, hands-on training equipping your employees with critical lifesaving skills, CPR techniques, and emergency response procedures.",
+        "service-5-title": "Working at Height",
+        "service-5-desc": "Fall protection, scaffolding safety, and high-angle rescue training certified to international health and safety protocols.",
+        "service-6-title": "Fire Fighting & Safety",
+        "service-6-desc": "Industrial firefighting response, fire prevention strategies, extinguisher operations, and evacuation planning.",
+        "training-eyebrow": "Practical Competence",
+        "training-title": "Empowering Professionals",
+        "training-desc": "Certified courses designed to enhance safety culture and build crucial lifesaving skills across Mauritania's industrial workforce.",
+        "pic-1-title": "First Aid Training",
+        "pic-2-title": "Working at Height",
+        "pic-3-title": "Risk Assessment",
+        "pic-4-title": "Fire Fighting",
+        "about-eyebrow": "About RIM-HSE",
+        "about-title": "Bridging International Standards with Local Operations",
+        "about-desc-1": "RIM-HSE (Réseau d'Ingénierie Mauritanien pour la Santé, la Sécurité et l'Environnement) is an established professional service company that champions international workplace safety cultures in Northwest Africa. By providing specialized training courses, system auditing, hazard identification, and advanced machinery inspections, we help both private firms and government institutions lower environmental risks and operational liabilities.",
+        "about-desc-2": "Since 2017, we have worked closely with industry leaders in mining, logistics, energy, and telecommunications to establish robust safety guidelines, train thousands of personnel, and verify regulatory compliance.",
+        "about-val-1-title": "Safety First",
+        "about-val-1-desc": "Protecting lives is our ultimate mission.",
+        "about-val-2-title": "Local Expertise",
+        "about-val-2-desc": "Deep knowledge of Mauritanian operations.",
+        "about-stat-years": "Years of Excellence",
+        "about-stat-clients": "Corporate Clients",
+        "clients-eyebrow": "Industry Leaders",
+        "clients-title": "Trusted Across Mauritania",
+        "lookup-eyebrow": "Security & Credentials",
+        "lookup-title": "RIM-HSE Certificate Verification",
+        "lookup-desc": "Verify the authenticity of safety and compliance certificates issued by RIM-HSE. Enter the certificate serial number to query our records instantly.",
+        "lookup-card-title": "Query Verification Database",
+        "lookup-card-desc": "Input the serial code as printed on the certificate (e.g. HSE-2026-001).",
+        "lookup-placeholder": "Enter Certificate ID...",
+        "lookup-btn": "Verify Now",
+        "lookup-ledger-link": "Official Apps Script Ledger Database →",
+        "contact-eyebrow": "Contact Us",
+        "contact-title": "Get in Touch Today",
+        "contact-desc": "Ready to discuss your safety auditing needs, arrange specialized corporate training, or inspect your safety gear? Reach out to our team now.",
+        "contact-address": "Avenue Président Yasser Arafat, ZRB 32, BP 2852 – Nouakchott, Mauritania",
+        "contact-whatsapp": "Chat on WhatsApp",
+        "form-name": "Full Name",
+        "form-email": "Email Address",
+        "form-phone": "Phone Number",
+        "form-msg": "Your Message",
+        "form-submit": "Send Inquiry",
+        "footer-desc": "Health, Safety & Environment training and consulting — elevating industrial safety standards in Mauritania since 2017.",
+        "footer-links-title": "Quick Links",
+        "footer-contact-title": "Head Office"
+      },
+      fr: {
+        "nav-home": "Accueil",
+        "nav-services": "Services",
+        "nav-training": "Formations",
+        "nav-about": "À Propos",
+        "nav-clients": "Partenaires",
+        "nav-lookup": "Vérification",
+        "nav-contact": "Contact",
+        "nav-cta": "Prendre RDV",
+        "hero-eyebrow": "Fondé en 2017 · Nouakchott, Mauritanie",
+        "hero-title": "Élever les Normes de Sécurité Industrielle en Mauritanie",
+        "hero-sub": "Expertise en conseil, formation et conformité HSE. Protéger votre personnel, sécuriser vos opérations et garantir l'excellence réglementaire.",
+        "hero-btn-explore": "Nos Services",
+        "hero-btn-verify": "Vérifier un certificat",
+        "hero-stat-title": "RIM-HSE en un coup d'œil",
+        "hero-stat-1": "Professionnels certifiés formés",
+        "hero-stat-2": "Clients corporatifs accompagnés",
+        "hero-stat-3": "Focus conformité & qualité",
+        "card-training-title": "Formation Complète",
+        "card-training-desc": "Programmes de formation HSE adaptés aux normes locales et internationales, garantissant la préparation et la certification de vos équipes.",
+        "card-compliance-title": "Maîtrise Réglementaire",
+        "card-compliance-desc": "Navigation précise dans les réglementations de sécurité complexes pour assurer la conformité et éviter les sanctions.",
+        "card-safety-title": "Sécurité Opérationnelle",
+        "card-safety-desc": "Réduction des risques sur le lieu de travail et augmentation de l'efficacité grâce à des audits et analyses de risques proactives.",
+        "services-eyebrow": "Nos Services",
+        "services-title": "Solutions HSE Professionnelles",
+        "services-desc": "Services complets en santé, sécurité et environnement adaptés aux besoins industriels de la Mauritanie.",
+        "btn-learn-more": "En savoir plus",
+        "service-1-title": "Conseil ISO 45001",
+        "service-1-desc": "Analyse d'écart, audit et conception de systèmes pour aligner vos opérations sur la norme mondiale de gestion de la santé et de la sécurité.",
+        "service-2-title": "Analyse des Risques",
+        "service-2-desc": "Évaluation rigoureuse des risques (HAZID, HAZOP, HIRA) pour les secteurs minier, logistique et pétro-gazier afin d'atténuer les dangers.",
+        "service-3-title": "Équipements de Sécurité",
+        "service-3-desc": "Fourniture et maintenance d'EPI de qualité, d'appareils de détection de gaz calibrés et de systèmes d'extinction d'incendie.",
+        "service-4-title": "Secourisme & RCP",
+        "service-4-desc": "Formation pratique certifiée pour doter vos collaborateurs de compétences vitales en premiers secours et procédures d'urgence.",
+        "service-5-title": "Travail en Hauteur",
+        "service-5-desc": "Protection contre les chutes, sécurité des échafaudages et sauvetage en hauteur certifiés selon les protocoles internationaux.",
+        "service-6-title": "Lutte contre l'Incendie",
+        "service-6-desc": "Réponse aux incendies industriels, stratégies de prévention, manipulation d'extincteurs et planification d'évacuation.",
+        "training-eyebrow": "Compétence Pratique",
+        "training-title": "Renforcer les Compétences",
+        "training-desc": "Des cours certifiés conçus pour améliorer la culture de sécurité et développer des compétences de sauvetage vitales en Mauritanie.",
+        "pic-1-title": "Secourisme",
+        "pic-2-title": "Travail en hauteur",
+        "pic-3-title": "Analyse des risques",
+        "pic-4-title": "Lutte contre l'incendie",
+        "about-eyebrow": "À Propos de RIM-HSE",
+        "about-title": "Relier les Normes Internationales aux Réalités Locales",
+        "about-desc-1": "Le RIM-HSE (Réseau d'Ingénierie Mauritanien pour la Santé, la Sécurité et l'Environnement) est un bureau d'études et de formation de premier plan en Afrique du Nord-Ouest. À travers des formations spécialisées, des audits de conformité réglementaire et l'inspection d'équipements, nous accompagnons les entreprises pour minimiser leurs risques opérationnels et environnementaux.",
+        "about-desc-2": "Depuis 2017, nous collaborons étroitement avec les leaders de la mine, de l'énergie et des télécoms en Mauritanie pour bâtir des environnements de travail sûrs et productifs.",
+        "about-val-1-title": "Sécurité d'Abord",
+        "about-val-1-desc": "Protéger les vies est notre mission absolue.",
+        "about-val-2-title": "Expertise Locale",
+        "about-val-2-desc": "Connaissance approfondie du contexte mauritanien.",
+        "about-stat-years": "Années d'excellence",
+        "about-stat-clients": "Clients Entreprises",
+        "clients-eyebrow": "Leaders Industriels",
+        "clients-title": "Ils nous font confiance",
+        "lookup-eyebrow": "Sécurité & Qualifications",
+        "lookup-title": "RIM-HSE Vérification de Certificats",
+        "lookup-desc": "Vérifiez l'authenticité des certificats émis par RIM-HSE. Entrez le numéro de série pour interroger instantanément notre base de données.",
+        "lookup-card-title": "Rechercher dans le Registre",
+        "lookup-card-desc": "Saisissez le code de série tel qu'indiqué sur le certificat (ex: HSE-2026-001).",
+        "lookup-placeholder": "Numéro de certificat...",
+        "lookup-btn": "Vérifier",
+        "lookup-ledger-link": "Registre officiel Apps Script Ledger →",
+        "contact-eyebrow": "Contactez-nous",
+        "contact-title": "Discutons de vos projets",
+        "contact-desc": "Besoin d'un audit de sécurité, d'une formation sur mesure ou d'inspecter vos équipements ? Notre équipe est à votre écoute.",
+        "contact-address": "Avenue Président Yasser Arafat, ZRB 32, BP 2852 – Nouakchott, Mauritanie",
+        "contact-whatsapp": "Nous écrire sur WhatsApp",
+        "form-name": "Nom Complet",
+        "form-email": "Adresse Email",
+        "form-phone": "Téléphone",
+        "form-msg": "Votre Message",
+        "form-submit": "Envoyer la demande",
+        "footer-desc": "Formation et conseil en Santé, Sécurité et Environnement — Élever les standards de sécurité en Mauritanie depuis 2017.",
+        "footer-links-title": "Accès Rapide",
+        "footer-contact-title": "Siège Social"
+      },
+      ar: {
+        "nav-home": "الرئيسية",
+        "nav-services": "خدماتنا",
+        "nav-training": "التدريب",
+        "nav-about": "من نحن",
+        "nav-clients": "شركاؤنا",
+        "nav-lookup": "التحقق من الشهادات",
+        "nav-contact": "اتصل بنا",
+        "nav-cta": "احجز استشارة",
+        "hero-eyebrow": "تأسست عام 2017 · نواكشوط، موريتانيا",
+        "hero-title": "رفع معايير السلامة الصناعية في موريتانيا",
+        "hero-sub": "خدمات استشارية وتدريبية متخصصة في مجالات الصحة والسلامة والبيئة. حماية كوادركم، وتأمين عملياتكم، وضمان التميز التنظيمي.",
+        "hero-btn-explore": "خدماتنا",
+        "hero-btn-verify": "التحقق من شهادة",
+        "hero-stat-title": "لمحة عن المؤسسة",
+        "hero-stat-1": "مهني معتمد تم تدريبهم",
+        "hero-stat-2": "مؤسسة تم تقديم الخدمات لها",
+        "hero-stat-3": "التركيز على الجودة والامتثال",
+        "card-training-title": "تدريب شامل",
+        "card-training-desc": "برامج تدريبية متطورة تلائم المعايير المحلية والدولية لضمان جاهزية واعتماد الكوادر البشرية لديك.",
+        "card-compliance-title": "إتقان اللوائح والتنظيمات",
+        "card-compliance-desc": "التعامل بدقة مع القوانين والأنظمة المعقدة لضمان امتثال منشأتك وتجنب أي مسؤوليات قانونية.",
+        "card-safety-title": "السلامة التشغيلية",
+        "card-safety-desc": "الحد من مخاطر العمل وزيادة الكفاءة عبر استراتيجيات السلامة الاستباقية وتقييم المخاطر والتدقيق المستمر.",
+        "services-eyebrow": "خدماتنا",
+        "services-title": "حلول مهنية متكاملة",
+        "services-desc": "خدمات شاملة في مجالات الصحة والسلامة المهنية والبيئة مصممة لتلبية المتطلبات الصناعية في موريتانيا.",
+        "btn-learn-more": "اقرأ المزيد",
+        "service-1-title": "استشارات ISO 45001",
+        "service-1-desc": "تحليل الفجوات والتدقيق وتصميم الأنظمة لمواءمة عملياتك مع المعيار العالمي لإدارة الصحة والسلامة المهنية.",
+        "service-2-title": "تقييم المخاطر المهنية",
+        "service-2-desc": "دراسات تقييم المخاطر التفصيلية (HAZID, HAZOP, HIRA) لقطاعات التعدين، واللوجستيات، والنفط والغاز لمنع الحوادث.",
+        "service-3-title": "توريد معدات السلامة",
+        "service-3-desc": "توفير وصيانة معدات الحماية الشخصية عالية الجودة، وأجهزة الكشف عن الغازات المعايرة، وأنظمة مكافحة الحرائق.",
+        "service-4-title": "الإسعافات الأولية",
+        "service-4-desc": "تدريب عملي معتمد لتزويد موظفيكم بمهارات إنقاذ الحياة الأساسية، والإنعاش القلبي الرئوي، والتعامل مع الطوارئ.",
+        "service-5-title": "العمل في المرتفعات",
+        "service-5-desc": "أنظمة الحماية من السقوط، وسلامة السقالات، والإنقاذ في المرتفعات المعتمدة وفق بروتوكولات السلامة العالمية.",
+        "service-6-title": "مكافحة الحرائق والسلامة",
+        "service-6-desc": "الاستجابة للحرائق الصناعية، واستراتيجيات الوقاية منها، وتشغيل أجهزة الإطفاء، وتخطيط عمليات الإخلاء الطارئ.",
+        "training-eyebrow": "الكفاءة العملية",
+        "training-title": "تمكين الكوادر المهنية",
+        "training-desc": "دورات تدريبية معتمدة تهدف إلى تعزيز ثقافة السلامة وبناء المهارات الأساسية لإنقاذ الأرواح في المنشآت الصناعية بموريتانيا.",
+        "pic-1-title": "الإسعافات الأولية",
+        "pic-2-title": "العمل في المرتفعات",
+        "pic-3-title": "تقييم المخاطر",
+        "pic-4-title": "مكافحة الحرائق",
+        "about-eyebrow": "عن المؤسسة",
+        "about-title": "الربط بين المعايير الدولية والعمليات المحلية",
+        "about-desc-1": "تعتبر شركة RIM-HSE (الشبكة الهندسية الموريتانية للصحة والسلامة والبيئة) مؤسسة رائدة تقدم حلولاً عملية لمساعدة المنشآت على تحسين أداء السلامة، والامتثال للوائح، والتميز التشغيلي منذ تأسيسها في عام 2017 في نواكشوط.",
+        "about-desc-2": "نحن نعمل عن كثب مع كبرى الشركات في قطاعات التعدين، والخدمات اللوجستية، والطاقة، والاتصالات لبناء بيئات عمل آمنة ومتوافقة مع المعايير الدولية.",
+        "about-val-1-title": "السلامة أولاً",
+        "about-val-1-desc": "حماية الأرواح هي مهمتنا الأسمى والغائية.",
+        "about-val-2-title": "خبرة محلية",
+        "about-val-2-desc": "فهم عميق للاحتياجات والعمليات التشغيلية بموريتانيا.",
+        "about-stat-years": "سنوات من التميز",
+        "about-stat-clients": "عملاء من الشركات",
+        "clients-eyebrow": "رواد الصناعة",
+        "clients-title": "شركاء النجاح في موريتانيا",
+        "lookup-eyebrow": "الأمان والاعتمادات",
+        "lookup-title": "التحقق من شهادات RIM-HSE",
+        "lookup-desc": "تأكد من صحة شهادات السلامة والامتثال الصادرة عن مؤسستنا. أدخل الرقم التسلسلي للشهادة للاستعلام الفوري.",
+        "lookup-card-title": "البحث في قاعدة بيانات الشهادات",
+        "lookup-card-desc": "أدخل الرقم التسلسلي للشهادة كما هو مطبوع عليها (مثال: HSE-2026-001).",
+        "lookup-placeholder": "أدخل رقم الشهادة...",
+        "lookup-btn": "تحقق الآن",
+        "lookup-ledger-link": "سجل التحقق الرسمي عبر Apps Script ←",
+        "contact-eyebrow": "اتصل بنا",
+        "contact-title": "تواصل معنا اليوم",
+        "contact-desc": "هل أنت مستعد لمناقشة متطلبات التدقيق الخاصة بمنشأتك، أو ترتيب تدريب مخصص لكادرك، أو فحص معدات السلامة؟ اتصل بنا الآن.",
+        "contact-address": "شارع الرئيس ياسر عرفات، ZRB 32، صندوق بريد 2852 - نواكشوط، موريتانيا",
+        "contact-whatsapp": "راسلنا عبر الواتساب",
+        "form-name": "الاسم الكامل",
+        "form-email": "البريد الإلكتروني",
+        "form-phone": "رقم الهاتف",
+        "form-msg": "رسالتك",
+        "form-submit": "إرسال الطلب",
+        "footer-desc": "التدريب والاستشارات في مجالات الصحة والسلامة والبيئة — رفع مستويات السلامة الصناعية في موريتانيا منذ 2017.",
+        "footer-links-title": "روابط سريعة",
+        "footer-contact-title": "المكتب الرئيسي"
+      }
+    };
+
+    // Global Language State
+    let currentLang = 'en';
+
+    // Toggle Mobile Menu
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const drawer = document.getElementById('mobile-menu-drawer');
+      
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        setTimeout(() => {
+          drawer.classList.remove('translate-x-full');
+          drawer.classList.remove('-translate-x-full');
+        }, 50);
+      } else {
+        if (document.documentElement.dir === 'rtl') {
+          drawer.classList.add('-translate-x-full');
+        } else {
+          drawer.classList.add('translate-x-full');
+        }
+        setTimeout(() => {
+          menu.classList.add('hidden');
+        }, 300);
+      }
+    }
+
+    // Switch Language Engine (With smooth layout mirroring and typography swaps)
+    function switchLanguage(lang) {
+      currentLang = lang;
+      const html = document.documentElement;
+
+      // Update active language button styles
+      ['en', 'fr', 'ar'].forEach(l => {
+        const btn = document.getElementById(`lang-${l}`);
+        if (l === lang) {
+          btn.className = "font-bold tracking-wider rounded-full px-3 py-1.5 transition-all bg-teal-brand text-white shadow-sm";
+        } else {
+          btn.className = "font-bold tracking-wider rounded-full px-3 py-1.5 transition-all text-charcoal-500 hover:text-charcoal-900";
+        }
+      });
+
+      // Mirror layout if Arabic is selected
+      if (lang === 'ar') {
+        html.setAttribute('dir', 'rtl');
+        html.setAttribute('lang', 'ar');
+        
+        // Adjust drawer transitions for RTL
+        const drawer = document.getElementById('mobile-menu-drawer');
+        drawer.classList.remove('right-0');
+        drawer.classList.add('left-0');
+        
+        // Flip marquee direction for RTL
+        const marqueeTrack = document.getElementById('marquee-track');
+        marqueeTrack.classList.remove('animate-marquee');
+        marqueeTrack.classList.add('animate-marquee-rtl');
+      } else {
+        html.setAttribute('dir', 'ltr');
+        html.setAttribute('lang', lang);
+        
+        // Adjust drawer transitions for LTR
+        const drawer = document.getElementById('mobile-menu-drawer');
+        drawer.classList.remove('left-0');
+        drawer.classList.add('right-0');
+
+        // Restore marquee direction for LTR
+        const marqueeTrack = document.getElementById('marquee-track');
+        marqueeTrack.classList.remove('animate-marquee-rtl');
+        marqueeTrack.classList.add('animate-marquee');
+      }
+
+      // Translate all marked elements
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          element.textContent = translations[lang][key];
+        }
+      });
+
+      // Translate inputs placeholders
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(input => {
+        const key = input.getAttribute('data-i18n-placeholder');
+        if (translations[lang] && translations[lang][key]) {
+          input.placeholder = translations[lang][key];
+        }
+      });
+    }
+
+    // Filter Services Grid
+    function filterServices(category) {
+      // Update Tab Styles
+      const tabs = ['all', 'consulting', 'equipment', 'training'];
+      tabs.forEach(t => {
+        const btn = document.getElementById(`tab-${t}`);
+        if (t === category) {
+          btn.className = "px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-teal-brand text-white shadow-sm";
+        } else {
+          btn.className = "px-5 py-2.5 rounded-full text-sm font-semibold transition-all text-charcoal-500 hover:text-charcoal-900 hover:bg-charcoal-100";
+        }
+      });
+
+      // Filter Cards
+      const cards = document.querySelectorAll('.service-card');
+      cards.forEach(card => {
+        const cardCat = card.getAttribute('data-category');
+        if (category === 'all' || cardCat === category) {
+          card.classList.remove('hidden');
+          setTimeout(() => card.classList.remove('opacity-0', 'scale-95'), 50);
+        } else {
+          card.classList.add('opacity-0', 'scale-95');
+          setTimeout(() => card.classList.add('hidden'), 150);
+        }
+      });
+    }
+
+    // Mock Certificate Database for fully verifiable test states
+    const certDatabase = {
+      "HSE-2026-001": {
+        name_en: "Amadou Diallo",
+        name_fr: "Amadou Diallo",
+        name_ar: "أمادو ديالو",
+        course_en: "First Aid & CPR (Advanced)",
+        course_fr: "Secourisme & RCP (Avancé)",
+        course_ar: "الإسعافات الأولية والإنعاش القلبي الرئوي (متقدم)",
+        issue: "January 14, 2026",
+        expiry: "January 13, 2028"
+      },
+      "HSE-FA-882": {
+        name_en: "Fatimetou Mint Dah",
+        name_fr: "Fatimetou Mint Dah",
+        name_ar: "فاطمة بنت داه",
+        course_en: "Industrial Fire Fighting Level 1",
+        course_fr: "Lutte contre l'incendie industriel - Niveau 1",
+        course_ar: "مكافحة الحرائق الصناعية - المستوى الأول",
+        issue: "March 03, 2026",
+        expiry: "March 02, 2028"
+      },
+      "HSE-WAH-105": {
+        name_en: "Mohamed Ould Ely",
+        name_fr: "Mohamed Ould Ely",
+        name_ar: "محمد ولد اعلي",
+        course_en: "Working at Height and Rescue",
+        course_fr: "Travail en Hauteur et Sauvetage",
+        course_ar: "العمل في المرتفعات والإنقاذ",
+        issue: "May 20, 2026",
+        expiry: "May 19, 2028"
+      }
+    };
+
+    // Auto-fill codes for easy testing
+    function fillCode(code) {
+      document.getElementById('certIdInput').value = code;
+      // Scroll to input smoothly
+      document.getElementById('certIdInput').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // Certificate verification logic
+    function handleVerifyCert() {
+      const input = document.getElementById('certIdInput').value.trim();
+      const resultContainer = document.getElementById('certResultContainer');
+      
+      if (!input) {
+        let warnMsg = "Please enter a certificate ID to lookup.";
+        if (currentLang === 'fr') warnMsg = "Veuillez entrer un identifiant de certificat.";
+        if (currentLang === 'ar') warnMsg = "يرجى إدخال رقم الشهادة للتحقق منها.";
+        triggerCustomAlert("Attention", warnMsg, false);
+        return;
+      }
+
+      // Show searching state simulation
+      const verifyBtn = document.querySelector('#certificate button');
+      const originalBtnText = verifyBtn.innerHTML;
+      verifyBtn.disabled = true;
+      verifyBtn.innerHTML = `<svg class="animate-spin h-5 w-5 text-white" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>`;
+
+      setTimeout(() => {
+        // Restore button
+        verifyBtn.disabled = false;
+        verifyBtn.innerHTML = originalBtnText;
+
+        // Check Mock DB first
+        const cert = certDatabase[input];
+        if (cert) {
+          document.getElementById('resCertId').textContent = input;
+          document.getElementById('resStudent').textContent = currentLang === 'ar' ? cert.name_ar : (currentLang === 'fr' ? cert.name_fr : cert.name_en);
+          document.getElementById('resCourse').textContent = currentLang === 'ar' ? cert.course_ar : (currentLang === 'fr' ? cert.course_fr : cert.course_en);
+          document.getElementById('resIssueDate').textContent = cert.issue;
+          document.getElementById('resExpiryDate').textContent = cert.expiry;
+          
+          let statusText = "ACTIVE & VALID";
+          if (currentLang === 'fr') statusText = "ACTIF & VALIDE";
+          if (currentLang === 'ar') statusText = "نشط وصالح";
+          document.getElementById('certStatusMsg').textContent = statusText;
+
+          // Render result card with smooth fade in
+          resultContainer.classList.remove('hidden');
+          resultContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          // Hide previous results
+          resultContainer.classList.add('hidden');
+
+          // Fallback for non-mock input: Ledger Redirect
+          let warnTitle = "Ledger Lookup Redirect";
+          let warnBody = "Certificate was not found in the local cache. We are now redirecting you to our Google Apps Script master ledger database to perform a direct query.";
+          if (currentLang === 'fr') {
+            warnTitle = "Redirection vers le registre";
+            warnBody = "Le certificat n'a pas été trouvé localement. Nous vous redirigeons vers notre base de données Apps Script officielle pour une recherche directe.";
+          } else if (currentLang === 'ar') {
+            warnTitle = "إعادة توجيه إلى السجل";
+            warnBody = "لم يتم العثور على الشهادة محلياً. نقوم الآن بإعادة توجيهك إلى قاعدة بيانات Apps Script الرسمية للبحث المباشر.";
+          }
+
+          triggerCustomAlert(warnTitle, warnBody, true);
+          
+          // Countdown and redirect
+          setTimeout(() => {
+            window.open(`https://script.google.com/macros/s/AKfycbw_4OvHEVfvzh-2ldaw4TywfjwgJ16Rjasb2IURRTeLmW-bQjM4nm4kC__oI4gW7pG2/exec?query=${encodeURIComponent(input)}`, '_blank');
+          }, 2500);
+        }
+      }, 1000);
+    }
+
+    // Custom Alert Box (Replaces native alert for WCAG AA styling)
+    function triggerCustomAlert(title, message, isSuccess = true) {
+      const modal = document.getElementById('customAlertModal');
+      const content = document.getElementById('customAlertContent');
+      const icon = document.getElementById('modalIcon');
+      const titleEl = document.getElementById('modalTitle');
+      const msgEl = document.getElementById('modalMessage');
+
+      titleEl.textContent = title;
+      msgEl.textContent = message;
+
+      if (isSuccess) {
+        icon.className = "w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 bg-teal-brand/10 text-teal-brand border border-teal-brand/10";
+        icon.innerHTML = '<svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>';
+      } else {
+        icon.className = "w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 bg-rose-50 text-rose-600 border border-rose-100";
+        icon.innerHTML = '<svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>';
+      }
+
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        content.classList.remove('scale-95', 'opacity-0');
+      }, 50);
+    }
+
+    function closeCustomAlert() {
+      const modal = document.getElementById('customAlertModal');
+      const content = document.getElementById('customAlertContent');
+      
+      content.classList.add('scale-95', 'opacity-0');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 200);
+    }
+
+    // Contact Form Submission Handling
+    function handleInquirySubmit(event) {
+      event.preventDefault();
+      const form = document.getElementById('inquiryForm');
+      const formData = new FormData(form);
+      
+      // Basic anti-spam honeypot check
+      if (formData.get('_honeypot')) {
+        return; // Silent fail for bots
+      }
+
+      let title = "Thank You!";
+      let message = "Your safety inquiry has been successfully sent to the RIM-HSE team. We will respond within 24 hours.";
+
+      if (currentLang === 'fr') {
+        title = "Merci !";
+        message = "Votre demande a été envoyée avec succès à l'équipe de RIM-HSE. Nous vous répondrons sous 24 heures.";
+      } else if (currentLang === 'ar') {
+        title = "شكراً لك!";
+        message = "تم إرسال استفسارك بنجاح إلى فريق RIM-HSE. سنقوم بالرد عليك خلال 24 ساعة.";
+      }
+
+      triggerCustomAlert(title, message, true);
+      form.reset();
+    }
+
+    // Dynamic Navigation Shadow on Scroll
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.classList.remove('glass-nav');
+        header.classList.add('bg-white', 'shadow-md', 'border-transparent');
+      } else {
+        header.classList.add('glass-nav');
+        header.classList.remove('bg-white', 'shadow-md', 'border-transparent');
+      }
+    });
+  </script>
+</body>
+</html>
